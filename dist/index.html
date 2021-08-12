@@ -5,45 +5,70 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <title>Irka Tuman | Web Designer</title>
-</head>
-<body>
+  <link rel="stylesheet" href="style.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600&family=STIX+Two+Text:wght@400;500&display=swap" rel="stylesheet">
   <!-- Navigation -->
   <nav>
-    <div class="navlink_container">
-      <a href="">Работы</a>
-      <a href="">Обо мне</a>
-      <a href="">Мысли</a>
-      <a href="">Контакты</a>
-    </div>
-    <div class="nav_animate"></div>
-    <div class="navlink_container sites">
-      <a href="">Vk</a>
-      <a href="">Telegram</a>
-      <a href="">Habr</a>
+    <div class="container">
+      <div class="navlink_container">
+        <a href="" class="linkBeut linkBeutR">Работы</a>
+        <a href="" class="linkBeut linkBeutL">Обо мне</a>
+        <a href="" class="linkBeut linkBeutR">Мысли</a>
+        <a href="" class="linkBeut linkBeutL">Контакты</a>
+      </div>
+      <div class="nav_animate"></div>
+      <div class="navlink_container sites">
+        <a href="">Vk</a>
+        <a href="">Telegram</a>
+        <a href="">Habr</a>
+      </div>
     </div>
   </nav>
 
   <!-- Button Help -->
 
   <!-- Greetings -->
-  <div class="greetings_container">
+  <div class="container greetings_container">
     <div class="greetings_words">
       <h1>Привет. Я Ирина.<br/> Веб-разработчик</h1>
-      <p>Также я начинающий мобильный разработчик и дизайнер с креативным взглядом на каждую деталь</p>
+      <p class="gray">Также я начинающий мобильный разработчик и дизайнер с креативным взглядом на каждую деталь</p>
     </div>
-    <div class="greetings_animate"></div>
+      <div class="greetings_animate">
+            <div class="ga_block" aria-hidden="true"></div>
+            <div class="ga_block" aria-hidden="true"></div>
+            <div class="ga_block" aria-hidden="true"></div>
+            <div class="ga_block" aria-hidden="true"></div>
+            <div class="ga_block" aria-hidden="true"></div>
+            <div class="greetings_animate__wrap" aria-hidden="true">
+              <div class="c-hero__eye" aria-hidden="true">
+                <div class="c-hero__eye__inner" aria-hidden="true">
+                  <div class="c-hero__eye__scale" aria-hidden="true">
+                    <svg width="275" height="269" viewBox="0 0 275 269" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                      <rect class="c-eyelash c-eyelash--3" x="0.301636" y="40.4437" width="20" height="64" rx="8" transform="rotate(-45 0.301636 40.4437)" fill="white"/>
+                      <rect class="c-eyelash c-eyelash--2" x="126" width="20" height="64" rx="8" fill="white"/>
+                      <rect class="c-eyelash c-eyelash--1" x="257.556" y="26.3015" width="20" height="64" rx="8" transform="rotate(45 257.556 26.3015)" fill="white"/>
+                      <ellipse class="c-eyeball" cx="137.5" cy="181.5" rx="137.5" ry="87.5" fill="white"/>
+                      <path class="c-cornea" d="M138 233C166.719 233 190 209.943 190 181.5C190 153.057 166.719 130 138 130C109.281 130 86 153.057 86 181.5C86 209.943 109.281 233 138 233Z" fill="black"/>
+                    </svg>
+                  </div>
+                </div>
+              </div>
+            </div>
+      </div>
   </div>
 
   <!-- Works -->
-  <div class="works_container">
+  <div class="container">
     <div class="works_view-type"></div>
     <div class="works_block"></div>
   </div>
 
   <!-- Aboute Frelance -->
-  <div class="frelance_container">
+  <div class="container">
     <h1>Сейчас я нахожусь в свободном полете</h1>
-    <p>
+    <p class="gray">
       У вас есть интересная работа, в которой нужна помощь?
       <br/>
       Отправьте мне сообщения, и давайте поговорим.
