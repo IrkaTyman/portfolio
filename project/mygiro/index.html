@@ -1,0 +1,643 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>My-Giro</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous">
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="../../back.css">
+  <link rel="shortcut icon" type="image/svg" href="images/logoMin.svg"/>
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+</head>
+<body>
+  <a href="https://IrkaTyman.github.io/portfolio/">
+  	<div class="back_wrap">
+  		<div class="back">
+  			<img src="../../img/next.svg" alt="">
+  			<p>Вернуться</p>
+  		</div>
+  	</div>
+  </a>
+
+  <!-- ПЕРВЫЙ ЭКРАН С ШАПКОЙ-->
+
+  <div class="screen screen-1" id="top">
+    <a class="a-top " href="#top">
+      <div class="top-btn flex JC-center AI-center">
+        <img src="images/down-arrow.svg" alt="">
+      </div>
+    </a>
+    <header class="headerAndFooter flex JC-spaceBetween AI-center">
+        <div class="logo flex AI-center">
+          <img src="images/logoBig.svg" alt="">
+          <p class="flex FD-column">My Giro</p>
+        </div>
+        <div class="menu flex JC-spaceBetween">
+          <a href="#products">Товары</a>
+          <a href="#about">О нас</a>
+          <a href="#prefer">Преимущества</a>
+          <a href="#interesting">Интересно</a>
+        </div>
+        <div class="tel flex AI-center">
+          <p>+7 (912) 539-84-65</p>
+          <button>Позвонить</button>
+        </div>
+        <div class="btn-burger-menu">
+          <span class="menu-global menu-top"></span>
+          <span class="menu-global menu-middle"></span>
+          <span class="menu-global menu-bottom"></span>
+        </div>
+    </header>
+    <div class="burger-menu flex AI-center FD-column">
+      <a href="#products">
+        <div class="flex AI-center JC-center ">
+          <p>Товары</p>
+        </div>
+      </a>
+      <a href="#about">
+        <div class="flex AI-center JC-center ">
+          <p>О нас</p>
+        </div>
+      </a>
+      <a href="#prefer">
+        <div class="flex AI-center JC-center ">
+          <p>Преимущества</p>
+        </div>
+      </a>
+      <a href="#interesting">
+        <div class="flex AI-center JC-center ">
+          <p>Интересно</p>
+        </div>
+      </a>
+    </div>
+    <div class="container-xxl flex">
+      <div class="wrapper-text flex AI-center">
+        <div class="text">
+          <p><span>Твой</span> <span>транспорт</span> <span>для города</span></p>
+          <h1>My Giro</h1>
+          <p>Гироскутеры самокаты сегвеи</p>
+          <img src="images/down-arrow.svg" alt="">
+        </div>
+      </div>
+      <div class="img-grid">
+        <img src="images/screen1/1.jpg" alt="">
+        <img src="images/screen1/2.jpg" alt="" class="img-visible-non">
+        <img src="images/screen1/3.jpg" alt="">
+        <img src="images/screen1/4.jpg" alt="" class="img-visible-non">
+      </div>
+    </div>
+  </div>
+  <!--ВТОРОЙ ЭКРАН С ТОВАРОМ-->
+  <div class="screen screen2" id="products">
+    <div class="container-xxl">
+      <h2>Наши товары</h2>
+      <div class="filter-products">
+        <!--Инпуты нужны для возможности переключения фильтров без CSS-->
+        <input type="radio" id="all" name="categories" value="all" checked>
+        <input type="radio" id="hoverboard" name="categories" value="hoverboard">
+        <input type="radio" id="scooter" name="categories" value="scooter">
+        <input type="radio" id="segway" name="categories" value="segway">
+        <!-- Это видимые элементы для филтрации, подключающиеся к input с помощью for-->
+        <ol class="filters">
+          <li>
+            <label for="all" class="flex FD-column">Все товары</label>
+          </li>
+          <li>
+            <label for="hoverboard" class="flex FD-column">Гироскутеры</label>
+          </li>
+          <li>
+            <label for="scooter" class="flex FD-column">Эл. самокаты</label>
+          </li>
+          <li>
+            <label for="segway" class="flex FD-column">Сегвеи</label>
+          </li>
+        </ol>
+        <!--Это сами карточки товаров-->
+        <div class="products">
+          <div class="product flex FD-column" data-category="hoverboard">
+            <div class="product-img">
+              <img src="images/products/1.jpg" alt="">
+            </div>
+            <div class="product-info flex AI-center JC-spaceBetween FD-column">
+              <p class="product-info--name">Гироскутер Smart Balance 10 Красный</p>
+              <div class="product-info--stars flex JC-spaceBetween">
+                <img src="images/starYellow.svg" alt="">
+                <img src="images/starYellow.svg" alt="">
+                <img src="images/starYellow.svg" alt="">
+                <img src="images/starYellow.svg" alt="">
+                <img src="images/starGray.svg" alt="">
+              </div>
+              <p class="product-info--price">6990 руб.</p>
+              <button class="product-btn">Подробнее</button>
+            </div>
+          </div>
+          <div class="product flex FD-column" data-category="hoverboard">
+            <div class="product-img">
+              <img src="images/products/2.png" alt="">
+            </div>
+            <div class="product-info flex AI-center JC-spaceBetween FD-column">
+              <p class="product-info--name">Smart Balance Wheel 8</p>
+              <div class="product-info--stars flex JC-spaceBetween">
+                <img src="images/starYellow.svg" alt="">
+                <img src="images/starYellow.svg" alt="">
+                <img src="images/starYellow.svg" alt="">
+                <img src="images/starYellow.svg" alt="">
+                <img src="images/starGray.svg" alt="">
+              </div>
+              <p class="product-info--price">6900 руб.</p>
+              <button class="product-btn">Подробнее</button>
+            </div>
+          </div>
+          <div class="product flex FD-column" data-category="hoverboard">
+            <div class="product-img">
+              <img src="images/products/3.jpg" alt="">
+            </div>
+            <div class="product-info flex AI-center JC-spaceBetween FD-column">
+              <p class="product-info--name">MINIPRO 10.5</p>
+              <div class="product-info--stars flex JC-spaceBetween">
+                <img src="images/starYellow.svg" alt="">
+                <img src="images/starYellow.svg" alt="">
+                <img src="images/starYellow.svg" alt="">
+                <img src="images/starYellow.svg" alt="">
+                <img src="images/starYellow.svg" alt="">
+              </div>
+              <p class="product-info--price">9900 руб.</p>
+              <button class="product-btn">Подробнее</button>
+            </div>
+          </div>
+          <div class="product flex FD-column" data-category="hoverboard">
+            <div class="product-img">
+              <img src="images/products/4.jpg" alt="">
+            </div>
+            <div class="product-info flex AI-center JC-spaceBetween FD-column">
+              <p class="product-info--name">SMART BALANCE WHEEL GRAFFITY WHITE</p>
+              <div class="product-info--stars flex JC-spaceBetween">
+                <img src="images/starYellow.svg" alt="">
+                <img src="images/starYellow.svg" alt="">
+                <img src="images/starYellow.svg" alt="">
+                <img src="images/starYellow.svg" alt="">
+                <img src="images/starYellow.svg" alt="">
+              </div>
+              <p class="product-info--price">8900 руб.</p>
+              <button class="product-btn">Подробнее</button>
+            </div>
+          </div>
+          <div class="product flex FD-column" data-category="scooter">
+            <div class="product-img">
+              <img src="images/products/5.jpg" alt="">
+            </div>
+            <div class="product-info flex AI-center JC-spaceBetween FD-column">
+              <p class="product-info--name">Электросамокат KUGOO S1 PLUS (JILONG)</p>
+              <div class="product-info--stars flex JC-spaceBetween">
+                <img src="images/starYellow.svg" alt="">
+                <img src="images/starYellow.svg" alt="">
+                <img src="images/starYellow.svg" alt="">
+                <img src="images/starYellow.svg" alt="">
+                <img src="images/starYellow.svg" alt="">
+              </div>
+              <p class="product-info--price">22 900 руб.</p>
+              <button class="product-btn">Подробнее</button>
+            </div>
+          </div>
+          <div class="product flex FD-column" data-category="scooter">
+            <div class="product-img">
+              <img src="images/products/6.jpg" alt="">
+            </div>
+            <div class="product-info flex AI-center JC-spaceBetween FD-column">
+              <p class="product-info--name">Электросамокат KUGOO S1 Plus</p>
+              <div class="product-info--stars flex JC-spaceBetween">
+                <img src="images/starYellow.svg" alt="">
+                <img src="images/starYellow.svg" alt="">
+                <img src="images/starYellow.svg" alt="">
+                <img src="images/starYellow.svg" alt="">
+                <img src="images/starGray.svg" alt="">
+              </div>
+              <p class="product-info--price">22 900 руб.</p>
+              <button class="product-btn">Подробнее</button>
+            </div>
+          </div>
+          <div class="product flex FD-column" data-category="scooter">
+            <div class="product-img">
+              <img src="images/products/7.jpg" alt="">
+            </div>
+            <div class="product-info flex AI-center JC-spaceBetween FD-column">
+              <p class="product-info--name">Электросамокат KUGOO M4 11 Ah</p>
+              <div class="product-info--stars flex JC-spaceBetween">
+                <img src="images/starYellow.svg" alt="">
+                <img src="images/starYellow.svg" alt="">
+                <img src="images/starYellow.svg" alt="">
+                <img src="images/starYellow.svg" alt="">
+                <img src="images/starGray.svg" alt="">
+              </div>
+              <p class="product-info--price">29 900 руб.</p>
+              <button class="product-btn">Подробнее</button>
+            </div>
+          </div>
+          <div class="product flex FD-column" data-category="scooter">
+            <div class="product-img">
+              <img src="images/products/8.jpg" alt="">
+            </div>
+            <div class="product-info flex AI-center JC-spaceBetween FD-column">
+              <p class="product-info--name">Электросамокат MIDWAY YAMATO MINI</p>
+              <div class="product-info--stars flex JC-spaceBetween">
+                <img src="images/starYellow.svg" alt="">
+                <img src="images/starYellow.svg" alt="">
+                <img src="images/starYellow.svg" alt="">
+                <img src="images/starYellow.svg" alt="">
+                <img src="images/starYellow.svg" alt="">
+              </div>
+              <p class="product-info--price">17 900 руб.</p>
+              <button class="product-btn">Подробнее</button>
+            </div>
+          </div>
+          <div class="product flex FD-column" data-category="segway">
+            <div class="product-img">
+              <img src="images/products/9.jpg" alt="">
+            </div>
+            <div class="product-info flex AI-center JC-spaceBetween FD-column">
+              <p class="product-info--name">
+                Сегвей Smart Wheel A8 с ручкой Граффити MiniPro
+              </p>
+              <div class="product-info--stars flex JC-spaceBetween">
+                <img src="images/starYellow.svg" alt="">
+                <img src="images/starYellow.svg" alt="">
+                <img src="images/starYellow.svg" alt="">
+                <img src="images/starYellow.svg" alt="">
+                <img src="images/starYellow.svg" alt="">
+              </div>
+              <p class="product-info--price">11900 руб.</p>
+              <button class="product-btn">Подробнее</button>
+            </div>
+          </div>
+          <div class="product flex FD-column" data-category="segway">
+            <div class="product-img">
+              <img src="images/products/10.jpg" alt="">
+            </div>
+            <div class="product-info flex AI-center JC-spaceBetween FD-column">
+              <p class="product-info--name">
+                Сегвей Smart Wheel A8 с ручкой Пурпурное небо MiniPro
+              </p>
+              <div class="product-info--stars flex JC-spaceBetween">
+                <img src="images/starYellow.svg" alt="">
+                <img src="images/starYellow.svg" alt="">
+                <img src="images/starYellow.svg" alt="">
+                <img src="images/starYellow.svg" alt="">
+                <img src="images/starYellow.svg" alt="">
+              </div>
+              <p class="product-info--price">14900 руб.</p>
+              <button class="product-btn">Подробнее</button>
+            </div>
+          </div>
+          <div class="product flex FD-column" data-category="segway">
+            <div class="product-img">
+              <img src="images/products/11.jpg" alt="">
+            </div>
+            <div class="product-info flex AI-center JC-spaceBetween FD-column">
+              <p class="product-info--name">
+                Сегвей Smart Wheel A8 с ручкой Огонь и лед MiniPro
+              </p>
+              <div class="product-info--stars flex JC-spaceBetween">
+                <img src="images/starYellow.svg" alt="">
+                <img src="images/starYellow.svg" alt="">
+                <img src="images/starYellow.svg" alt="">
+                <img src="images/starYellow.svg" alt="">
+                <img src="images/starGray.svg" alt="">
+              </div>
+              <p class="product-info--price">11900 руб.</p>
+              <button class="product-btn">Подробнее</button>
+            </div>
+          </div>
+          <div class="product flex FD-column" data-category="segway">
+            <div class="product-img">
+              <img src="images/products/12.jpg" alt="">
+            </div>
+            <div class="product-info flex AI-center JC-spaceBetween FD-column">
+              <p class="product-info--name">
+                Мини сегвей MiniRobot  White
+              </p>
+              <div class="product-info--stars flex JC-spaceBetween">
+                <img src="images/starYellow.svg" alt="">
+                <img src="images/starYellow.svg" alt="">
+                <img src="images/starYellow.svg" alt="">
+                <img src="images/starYellow.svg" alt="">
+                <img src="images/starGray.svg" alt="">
+              </div>
+              <p class="product-info--price">11490 руб.</p>
+              <button class="product-btn">Подробнее</button>
+            </div>
+          </div>
+        </div>
+        <!-- Конец карточек-->
+      </div>
+    </div>
+  </div>
+  <!--ТРЕТИЙ ЭКРАН О КОМПАНИИ-->
+  <div class="screen screen3 " id="about">
+    <div class="container-xxl">
+      <div class="animationGiro flex AI-center JC-center">
+        <img src="images/logoMin.svg" alt="">
+      </div>
+      <h2>О нашей компании</h2>
+        <div class="aboutCompany-info flex AI-center">
+            В нашем интернет-магазине представлен большой выбор гироскутеров, сигвеев и электросамокатов от известных мировых производителей.
+            Все товары, представленные на нашем сайте, отобраны лучшими специалистами в этой области.Вы можете купить гироскутер, электросамокат или сигвей в нашем интернет-магазине
+            в любое время за низкую цену. Доставка заказов осуществляется бесплатнопо всей России. При выборе товара вам могут помочь наши консультанты. Так как Продажа гироскутеров, электросамокатов и сигвеев, осуществляется напрямую,
+            от производителей, в нашем интернет-магазине самые выгодные цены.
+        </div>
+    </div>
+  </div>
+  <!--ПООДПИСКА НА НОВОСТИ-->
+  <div class="email-news flex AI-center JC-spaceBetween">
+    <p>
+      Подписывайтесь на нашу рассылку. <span>Новости. Акции. Спецпредложения</span>
+    </p>
+    <input type="text" placeholder="Имя" class="visible-non"/>
+    <input type="email" placeholder="Email" class="visible-non"/>
+    <button class="visible-non">Подписаться</button>
+    <div class="flex FD-column">
+      <input type="text" placeholder="Имя"/>
+      <input type="email" placeholder="Email"/>
+      <button>Подписаться</button>
+    </div>
+  </div>
+  <!--ЧЕТВЕРТЫЙ ЭКРАН О КОНСУЛЬТАНТАХ-->
+  <div class="screen screen4">
+    <div class="animationGiro flex AI-center JC-center">
+      <img src="images/logoMinWhite.svg" alt="">
+    </div>
+    <div class="container-xxl">
+      <h2>Наши консультанты</h2>
+      <div class="consultants">
+        <div class="consultant-wrapper flex JC-center FD-column">
+          <div class="consultant flex AI-center JC-center FD-column">
+            <img src="images/consultant/1.jpg" alt="consultant">
+            <p>Галина Петрова</p>
+            <p class="status">Менеджер по продажам</p>
+          </div>
+        </div>
+        <div class="consultant-wrapper flex JC-center FD-column">
+          <div class="consultant flex AI-center JC-center FD-column">
+            <img src="images/consultant/2.jpg" alt="consultant">
+            <p>Иван Алексеев</p>
+            <p class="status">Менеджер по продажам</p>
+          </div>
+        </div>
+        <div class="consultant-wrapper flex JC-center FD-column">
+          <div class="consultant flex AI-center JC-center FD-column">
+            <img src="images/consultant/3.jpg" alt="consultant">
+            <p>Светлана Астархова</p>
+            <p class="status">Менеджер по продажам</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!--ПЯТЫЙ ЭКРАН О ПРЕИМУЩЕСТВАХ-->
+  <div class="screen screen5" id="prefer">
+    <div class="container-xxl">
+      <h1>Преимущества</h1>
+      <div id="carouselExampleDark" class="carousel carousel-dark slide flex JC-center" data-bs-ride="carousel">
+        <div class="carousel-indicators">
+          <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+          <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="1" aria-label="Slide 2"></button>
+          <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="2" aria-label="Slide 3"></button>
+          <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="3" aria-label="Slide 4"></button>
+          <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="4" aria-label="Slide 5"></button>
+        </div>
+        <div class="carousel-inner">
+          <div class="carousel-item active" data-bs-interval="3000">
+            <div class="carousel-item-custom flex AI-center" style="background-image: url('images/features/1.jpg');">
+              <div class="text">
+                <p class="header">
+                  Комфортность покупок
+                  <img src="images/features/peace.png" alt="">
+                </p>
+                <p>
+                  На нашем сайте покупатель может купить нужный ему товар с комфортом, так как мы бережно относимся к желаниям покупателя
+                </p>
+              </div>
+            </div>
+          </div>
+          <div class="carousel-item" data-bs-interval="3000">
+            <div class="carousel-item-custom flex AI-center" style="background-image: url('images/features/2.jpg');">
+              <div class="text">
+                <p class="header">
+                  Гарантия качества
+                  <img src="images/features/good.png" alt="">
+                </p>
+                <p>
+                  Мы ответсвенно относимся к качеству продаваемой нами продукции, поэтому наш товар проходит не один тест перед выпуском в продажу,
+                </p>
+              </div>
+            </div>
+          </div>
+          <div class="carousel-item" data-bs-interval="3000">
+            <div class="carousel-item-custom flex AI-center" style="background-image: url('images/features/3.jpg');">
+              <div class="text">
+                <p class="header">
+                  Большой ассортимент
+                  <img src="images/features/heart.png" alt="">
+                </p>
+                <p>
+                  Мы заботимся о том, чтобы наш покупатель мог купить товар в удобное для него время. Поэтому мы тщательно следим за нашим ассортиментом
+                </p>
+              </div>
+            </div>
+          </div>
+          <div class="carousel-item" data-bs-interval="3000">
+            <div class="carousel-item-custom flex AI-center" style="background-image: url('images/features/5.jpg');">
+              <div class="text">
+                <p class="header">
+                  Быстрая доставка
+                  <img src="images/features/good.png" alt="">
+                </p>
+                <p>
+                  Доставка производится в течении 5-15 дней с момента заказа
+                </p>
+              </div>
+            </div>
+          </div>
+          <div class="carousel-item" data-bs-interval="3000">
+            <div class="carousel-item-custom flex AI-center" style="background-image: url('images/features/4.jpg');">
+              <div class="text">
+                <p class="header">
+                  Онлайн-консультант
+                  <img src="images/features/peace.png" alt="">
+                </p>
+                <p>
+                  На нашем сайте вам может помочь с выбором подходящего товара онлайн-консультант
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleDark" data-bs-slide="prev">
+          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Previous</span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleDark" data-bs-slide="next">
+          <span class="carousel-control-next-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Next</span>
+        </button>
+      </div>
+      <div class="animationGiro flex AI-center JC-center">
+        <img src="images/logoMinGray.svg" alt="">
+      </div>
+      <div class="brand-header">
+        <div class="circle"></div>
+      </div>
+      <div class="brands">
+        <div class="brand flex AI-center FD-column">
+          <img src="images/brand/1.png" alt="">
+          <p class="brand-name">Kugoo</p>
+        </div>
+        <div class="brand flex AI-center FD-column">
+          <img src="images/brand/2.png" alt="">
+          <p class="brand-name">Xiaomi</p>
+        </div>
+        <div class="brand flex AI-center FD-column">
+          <img src="images/brand/3.png" alt="">
+          <p class="brand-name">Smart Balance</p>
+        </div>
+        <div class="brand flex AI-center FD-column">
+          <img src="images/brand/4.png" alt="">
+          <p class="brand-name">Airwheel</p>
+        </div>
+        <div class="brand flex AI-center FD-column">
+          <img src="images/brand/5.png" alt="">
+          <p class="brand-name">LINBOL</p>
+        </div>
+        <div class="brand flex AI-center FD-column">
+          <img src="images/brand/6.png" alt="">
+          <p class="brand-name">Subor</p>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!--ШЕСТОЙ ЭКРАН С ПОЛЕЗНОЙ ИНФОРМАЦИЕЙ-->
+  <div class="screen screen6" id="interesting">
+    <div class="container-xxl">
+      <div class="h1">
+        <h1>Полезная</h1>
+      </div>
+      <div class="interesting">
+        <div class="interesting-item" style='background-image:url("images/interesting/1.jpg")'>
+          <p>
+            Как выбрать гироскутер? Советы перед покупкой
+          </p>
+        </div>
+        <div class="interesting-item" style='background-image:url("images/interesting/2.jpg")'>
+          <p>
+            Электросамокат. Какой лучше и как выбрать?
+          </p>
+        </div>
+        <div class="interesting-item" style='background-image:url("images/interesting/3.jpg")'>
+          <p>
+            Как выбрать сигвей? На что обратить внимание?
+          </p>
+        </div>
+        <div class="interesting-item" style='background-image:url("images/interesting/4.jpg")'>
+          <p>
+            Советы по выбору гироскутера для ребенка.
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!--СЕДЬМОЙ ЭКРАН С ОСОБЕННОСТЯМИ-->
+  <div class="screen screen7">
+    <div class="container-xxl">
+      <div class="animationGiro flex AI-center JC-center">
+        <img src="images/logoMin.svg" alt="">
+      </div>
+      <h2>Особенности разных видов транспорта</h2>
+      <div class="features">
+        <div class="feature flex AI-center FD-column">
+          <h3>Гироскутер</h3>
+          <ul>
+            <li>
+              Управление – легко можно набирать скорость и входить в крутые повороты.
+            </li>
+            <li>
+              Экологичность – отсутствие топлива, а значит и выхлопных газов.
+            </li>
+            <li>
+              Компактность и небольшой вес - легко помещается в специальный чехол, рюкза, спортивную сумку
+            </li>
+            <li>
+              Простота – управление осваивается всего за 5-10 минут как взрослыми, так и детьми.
+            </li>
+            <li>
+              Бесшумность – электрический двигатель работает практически бесшумно.
+            </li>
+            <li>
+              Доступность - на гироскутер не нужны права
+            </li>
+          </ul>
+        </div>
+        <div class="feature flex AI-center FD-column">
+          <h3>Эл. самокат</h3>
+          <ul>
+            <li>
+              Удобство - есть моторчик, которые ведет самокат вместо тебя
+            </li>
+            <li>
+              Экологичность - работает только на электричестве
+            </li>
+            <li>
+              Равновесие - для многих самокаты более привычнее в плане равновесия
+            </li>
+            <li>
+              Маленькая зарядка - к сожалению, быстро разряжается (через 1-5 часов)
+            </li>
+            <li>
+              Бесшумность - и плюс и минус. Шума практически не создает, но при езде по дороге или тротуару это может вызвать проблемы
+            </li>
+          </ul>
+        </div>
+        <div class="feature flex AI-center FD-column">
+          <h3>Сегвей</h3>
+          <ul>
+            <li>
+              Управление – есть небольшая ручка для удобства
+            </li>
+            <li>
+              Быстрота - способен развивать скорость до 50 км/ч.
+            </li>
+            <li>
+              Простота - из-за ручки обучиться зде на нем еще проще, чем на гироскутере
+            </li>
+            <li>
+              Доступность - на сегвей не нужны права
+            </li>
+            <li>
+              Не для долгих поездок - как и у гироскутера нет сиденья
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+  <footer class="footer headerAndFooter flex JC-spaceBetween AI-center">
+    <div class="logo flex AI-center ">
+      <img src="images/logoBig.svg" alt="">
+      <p class="flex FD-column">My Giro</p>
+    </div>
+    <div class="menu flex JC-spaceBetween">
+      <a href="#products">Товары</a>
+      <a href="#about">О нас</a>
+      <a href="#prefer">Преимущества</a>
+      <a href="#interesting">Интересно</a>
+    </div>
+    <div class="tel flex FD-column">
+      <p>Москва, Набережная 2 оф. 142</p>
+      <p>+7 (912) 539-84-65</p>
+    </div>
+  </footer>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-gtEjrD/SeCtmISkJkNUaaKMoLD0//ElJ19smozuHV6z3Iehds+3Ulb9Bn9Plx0x4" crossorigin="anonymous"></script>
+  <script src="script.js"></script>
+</body>
+</html>
