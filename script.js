@@ -53,14 +53,14 @@ const eyeFollow = () => {
     bird.style.cssText= `
       position: absolute;
       top:var(--padding1rem);
-      left:50%;
+      left:46%;
       transform: rotate(${rot}deg) scaleY(-1)
     `
   } else {
     bird.style.cssText= `
       position: absolute;
       top:var(--padding1rem);
-      left:50%;
+      left:46%;
       transform: rotate(${rot}deg)
     `
   }
