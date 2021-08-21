@@ -29,10 +29,48 @@ burgerMenu.addEventListener('click', e => {
   }
 })
 
+//Анимация птички
+const eyeFollow = () => {
+
+  body.addEventListener('mousemove', (e) => {
+  let bird = document.querySelector(".bird-anim");
+  let x = bird.offsetLeft + (bird.clientWidth / 2);
+  let y = bird.offsetTop + (bird.clientHeight / 2);
+  let rad = Math.atan2(e.pageX - x, e.pageY - y);
+  let rot = (rad * (180 / Math.PI) * -1) + 270;
+  if(rot < 297 && rot > 233 || rot < 169 || rot > 369){
+    if(rot > 369){
+      rot = 369
+    } else if (rot < 169){
+      rot = 169
+    } else if(rot > 265){
+      rot = 297
+    } else {
+      rot = 233;
+    }
+  }
+  if(rot < 234){
+    bird.style.cssText= `
+      position: absolute;
+      top:var(--padding1rem);
+      left:50%;
+      transform: rotate(${rot}deg) scaleY(-1)
+    `
+  } else {
+    bird.style.cssText= `
+      position: absolute;
+      top:var(--padding1rem);
+      left:50%;
+      transform: rotate(${rot}deg)
+    `
+  }
+  })};
+eyeFollow()
+
 // Работа бокового меню
 const drawer = document.querySelector('.drawer_container');
 const openDrawer = () => {
-  drawer.classList.add('movein')
+  drawer.classList.toggle('movein')
   setTimeout(() => {
     body.classList.remove('open-menu')
     burgerMenu.src='img/menu.svg'
