@@ -187,7 +187,8 @@ nav .container{
 .nav_animate{
   position: absolute;
   top:var(--padding1rem);
-  right:50%
+  left:50%;
+  transform: scale(-1,1)
 }
 .nav_animate svg{
   height:2rem;
@@ -632,7 +633,7 @@ nav img{
   justify-content: space-between;
   -ms-align-items: flex-start;
   align-items: flex-start;
-  margin-bottom: calc(var(--padding1-5rem)*3);
+  margin-bottom: calc(var(--padding1-5rem)*2);
 }
 .drawer_form{
   width: 100%;
@@ -698,8 +699,6 @@ nav img{
   content:"tymanira2004@gmail.com"
 }
 [type="submit"]{
-  cursor: pointer;
-  margin-bottom: calc(var(--padding1-5rem)*3);
   border:2px solid #5a4610;
   background-color: var(--light-yellow);
   color:#5a4610;
@@ -895,10 +894,26 @@ footer.container.about{
   h1,h2,h3,h4{font-family: 'Bogart-Medium';}
   h1{font-size: 3rem}
   h2{font-size: 2.6rem}
+  h5{font-size: 1.2rem}
+}
+@media (max-width:570px){
+  .drawer_container{
+    padding: var(--padding1-5rem)
+  }
+  .open-menu .nav-site a{
+    font-size: 1.2rem
+  }
+  nav .nav-site a{
+    font-size: 0.9rem
+  }
+  .navlink_container a, .burger-menu{
+    margin:var(--padding1-5rem) 0.8rem;
+    position:relative;
+  }
 }
 @media (max-width:510px){
   html{
-    font-size: clamp(12px, 1.2vw, 16px);
+    font-size: 16px;
   }
   nav .nav-site a{
     display: none;
