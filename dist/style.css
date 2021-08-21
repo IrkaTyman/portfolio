@@ -187,7 +187,7 @@ nav .container{
 .nav_animate{
   position: absolute;
   top:var(--padding1rem);
-  left:50%;
+  left:46%;
   transform: scale(-1,1)
 }
 .nav_animate svg{
