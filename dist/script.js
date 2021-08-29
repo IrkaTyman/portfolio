@@ -122,7 +122,6 @@ function formValidate(form){
         error++
       }
     }
-  console.log(error)
   error == 0 ? btnSub.disabled=false:btnSub.disabled=true
   }
 function clearForm(){

@@ -998,7 +998,7 @@ footer.container.about{
   .continue_link svg{
     display: none;
   }
-  .drawer_container{
+  .drawer_container,.drawer{
     width: 100%;
   }
 }

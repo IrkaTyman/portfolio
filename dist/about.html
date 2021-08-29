@@ -102,12 +102,21 @@
       </a>
     </div>
     <div class="drawer_form">
-      <form action="#">
-        <input type="text" placeholder="Имя">
-        <input type="text" placeholder="Email">
-        <textarea name="name" placeholder="Сообщение" maxlength=""></textarea>
+      <form action="#" id="form">
+        <div class="validate-input">
+          <input type="text" placeholder="Имя" class="req">
+          <p>Обязательное поле</p>
+        </div>
+        <div class="validate-input">
+          <input placeholder="Email" class="req email">
+          <p>Введите корректный адрес</p>
+        </div>
+        <div class="validate-input">
+          <textarea name="message" placeholder="Сообщение" class="req"></textarea>
+          <p>Обязательное поле</p>
+        </div>
+        <button disabled = 'true' type="submit" onclick='(e) => {sendForm(e)}'>Отправить</button>
       </form>
-      <button>Отправить</button>
     </div>
     <div class="drawer_links">
       <div class="drawer_link">
