@@ -10,24 +10,39 @@ typeBlock ? typeBlock.addEventListener('click', e => {
 
 // Работа бургер меню
 const burgerMenu = document.querySelector('.burger-menu');
-const navSite = document.querySelector('.nav-site');
+const closeBurgerMenu = document.querySelector('.burger-menu-close')
+const menuMobile = document.querySelector('.menu-mob');
 const body = document.body
 
-burgerMenu.addEventListener('click', e => {
-  if(body.classList.contains('open-menu')){
-    navSite.classList.add('fideout')
-    navSite.classList.remove('fidein')
+closeBurgerMenu.addEventListener('click', e => {
+    menuMobile.classList.add('fideout')
+    menuMobile.classList.remove('fidein')
+    body.classList.remove('open-menu-img')
     setTimeout(()=>{
       body.classList.remove('open-menu')
-      burgerMenu.src='img/menu.svg'},600)
-
-  } else {
-    body.classList.add('open-menu')
-    navSite.classList.add('fidein')
-    navSite.classList.remove('fideout')
-    burgerMenu.src='img/closeMenu.svg'
-  }
+    },600)
 })
+
+burgerMenu.addEventListener('click',() => {
+    body.classList.add('open-menu')
+    menuMobile.classList.add('fidein')
+    menuMobile.classList.remove('fideout')
+  })
+
+// Работа бокового меню
+  const drawer = document.querySelector('.drawer');
+  const openDrawer = () => {
+    drawer.classList.toggle('movein')
+    setTimeout(() => {
+      body.classList.remove('open-menu')
+      menuMobile.classList.remove('fideout','fidein')
+    },1000)
+
+  }
+  const closeDrawer = () => {
+    drawer.classList.remove('movein')
+    clearForm()
+  }
 
 //Анимация птички
 const eyeFollow = () => {
@@ -67,24 +82,30 @@ const eyeFollow = () => {
   })};
 eyeFollow()
 
-// Работа бокового меню
-const drawer = document.querySelector('.drawer_container');
-const openDrawer = () => {
-  drawer.classList.toggle('movein')
-  setTimeout(() => {
-    body.classList.remove('open-menu')
-    burgerMenu.src='img/menu.svg'
-    navSite.classList.remove('fideout','fidein')
-  },1000)
-
-}
-const closeDrawer = () => {
-  drawer.classList.remove('movein')
-}
-
 // Отправка данных формы
-const formValidate = (form) => {
-  let error = null;
+const form = document.querySelector('#form')
+const btnSub = form.querySelector('button')
+form.addEventListener('submit', sendForm)
+
+async function sendForm(e){
+  e.preventDefault();
+  drawer.classList.add('form_sending')
+  let formData = new FormData(form)
+  let response = await fetch('sendmail.php', {
+    method: 'POST',
+    body: formData
+  })
+  if(response.ok){
+    let result = await response.json();
+    alert(result.message);
+    form.reset()
+    drawer.classList.remove('form_sending')
+  }
+}
+
+form.addEventListener('change',() => formValidate(form))
+function formValidate(form){
+  let error = 0;
   let formReq = document.querySelectorAll('.req');
 
   for(let i = 0; i < formReq.length; i++){
@@ -96,20 +117,21 @@ const formValidate = (form) => {
         input.classList.add('error')
         error++
       }
-    } else {
-      if(input.value.length < 2){
+    } else if(input.value === ''){
         input.classList.add('error')
         error++
       }
     }
+  console.log(error)
+  error == 0 ? btnSub.disabled=false:btnSub.disabled=true
+  }
+function clearForm(){
+  for(let i =0; i < form.length; i++){
+    let input = form[i]
+    input.classList.remove('error')
+    input.value = ''
   }
 }
-const emailValid = (input) => {
+function emailValid(input){
   return !/^([\w\.\-]+)@([\w\-]+)((\.(\w){2,3})+)$/.test(input.value)
 }
-async function sendForm(e){
-  e.preventDefault();
-  let error = formValidate(form)
-}
-const form = document.querySelector('#form')
-form.addEventListener('submit', sendForm)

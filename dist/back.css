@@ -42,3 +42,9 @@
   transform: rotate(180deg);
   margin-right:clamp(16px, 1.1vw, 20px);
 }
+
+@media (max-width:600px){
+  .back_wrap:hover{
+    width:calc(clamp(16px, 1.1vw, 20px)*3);
+  }
+}

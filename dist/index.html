@@ -74,57 +74,86 @@
           <img src="img/github.svg" alt="GitHub" >
         </a>
       </div>
+      <div class="menu-mob">
+        <img src="img/closeMenu.svg" alt="menu" class="burger-menu-close">
+        <a href="https://IrkaTyman.github.io/portfolio/" class="linkBeut linkBeutR">Работы</a>
+        <a href="https://IrkaTyman.github.io/portfolio/about.html" class="linkBeut linkBeutL">Обо мне</a>
+        <a href="https://IrkaTyman.github.io/portfolio/wip.html" class="linkBeut linkBeutR">Мысли</a>
+        <a onclick = "openDrawer()" class="linkBeut linkBeutL">Контакты</a>
+      </div>
     </div>
   </nav>
 
   <!-- contacts -->
-  <div class="drawer_container">
-    <div class="drawer_greeting ">
-      <h5>Привет! Давай работать вместе.</h5>
-      <a onclick="closeDrawer()">
-        <svg version="1.1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512.001 512.001">
-        <g>
-        	<g>
-        		<path d="M284.286,256.002L506.143,34.144c7.811-7.811,7.811-20.475,0-28.285c-7.811-7.81-20.475-7.811-28.285,0L256,227.717
-        			L34.143,5.859c-7.811-7.811-20.475-7.811-28.285,0c-7.81,7.811-7.811,20.475,0,28.285l221.857,221.857L5.858,477.859
-        			c-7.811,7.811-7.811,20.475,0,28.285c3.905,3.905,9.024,5.857,14.143,5.857c5.119,0,10.237-1.952,14.143-5.857L256,284.287
-        			l221.857,221.857c3.905,3.905,9.024,5.857,14.143,5.857s10.237-1.952,14.143-5.857c7.811-7.811,7.811-20.475,0-28.285
-        			L284.286,256.002z"/>
-        	</g>
-        </g>
+  <div class="drawer">
+    <div class="drawer_container">
+      <div class="loader">
+        <h5>Отправка сообщения</h5>
+        <div class="wrapper">
+          <span class="ball"></span>
+          <span class="ball"></span>
+          <span class="ball"></span>
+          <span class="ball"></span>
+        </div>
+        <svg xmlns="http://www.w3.org/2000/svg" version="1.1">
+          <defs>
+            <filter id="ball">
+              <feGaussianBlur in="SourceGraphic" stdDeviation="10" result="blur" />
+              <feColorMatrix in="blur" mode="matrix" values="1 0 0 0 0  0 1 0 0 0  0 0 1 0 0  0 0 0 18 -7" result="ball" />
+              <feBlend in="SourceGraphic" in2="ball" />
+            </filter>
+          </defs>
         </svg>
-      </a>
-    </div>
-    <div class="drawer_form">
-      <form action="#" id="form">
-        <div class="validate-input">
-          <input type="text" placeholder="Имя" minlength="3" class="req" required>
-          <p>Слишком короткое имя</p>
+      </div>
+      <div class="drawer_greeting ">
+        <h5>Привет! Давай работать вместе.</h5>
+        <a onclick="closeDrawer()">
+          <svg version="1.1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512.001 512.001">
+            <g>
+            	<g>
+            		<path d="M284.286,256.002L506.143,34.144c7.811-7.811,7.811-20.475,0-28.285c-7.811-7.81-20.475-7.811-28.285,0L256,227.717
+            			L34.143,5.859c-7.811-7.811-20.475-7.811-28.285,0c-7.81,7.811-7.811,20.475,0,28.285l221.857,221.857L5.858,477.859
+            			c-7.811,7.811-7.811,20.475,0,28.285c3.905,3.905,9.024,5.857,14.143,5.857c5.119,0,10.237-1.952,14.143-5.857L256,284.287
+            			l221.857,221.857c3.905,3.905,9.024,5.857,14.143,5.857s10.237-1.952,14.143-5.857c7.811-7.811,7.811-20.475,0-28.285
+            			L284.286,256.002z"/>
+            	</g>
+            </g>
+          </svg>
+        </a>
+      </div>
+      <div class="drawer_form">
+        <form action="#" id="form">
+          <div class="validate-input">
+            <input type="text" placeholder="Имя" class="req">
+            <p>Обязательное поле</p>
+          </div>
+          <div class="validate-input">
+            <input placeholder="Email" class="req email">
+            <p>Введите корректный адрес</p>
+          </div>
+          <div class="validate-input">
+            <textarea name="message" placeholder="Сообщение" class="req"></textarea>
+            <p>Обязательное поле</p>
+          </div>
+          <button disabled = 'true' type="submit" onclick='(e) => {sendForm(e)}'>Отправить</button>
+        </form>
+      </div>
+      <div class="drawer_links">
+        <div class="drawer_link">
+          <a href="https://vk.com/vitayavoblakah"><img src="img/vk.svg" alt=""></a>
         </div>
-        <div class="validate-input">
-          <input type="email" placeholder="Email" class="req email" required>
-          <p>Введите корректный адрес</p>
+        <div class="drawer_link">
+          <a href="https://t.me/Irkatyman"><img src="img/telegram.svg" alt=""></a>
         </div>
-        <textarea name="message" placeholder="Сообщение" minlength="20" class="req" required></textarea>
-        <button type="submit">Отправить</button>
-      </form>
-    </div>
-    <div class="drawer_links">
-      <div class="drawer_link">
-        <a href="https://vk.com/vitayavoblakah"><img src="img/vk.svg" alt=""></a>
-      </div>
-      <div class="drawer_link">
-        <a href="https://t.me/Irkatyman"><img src="img/telegram.svg" alt=""></a>
-      </div>
-      <div class="drawer_link">
-        <a href="#"><img src="img/google.svg" alt=""></a>
-      </div>
-      <div class="drawer_link">
-        <a href="https://api.whatsapp.com/send?phone=89126835129"><img src="img/whatsapp.svg" alt=""></a>
+        <div class="drawer_link">
+          <a href="#"><img src="img/google.svg" alt=""></a>
+        </div>
+        <div class="drawer_link">
+          <a href="https://api.whatsapp.com/send?phone=89126835129"><img src="img/whatsapp.svg" alt=""></a>
+        </div>
       </div>
     </div>
   </div>
-
   <!-- Greetings -->
   <div class="container greetings_container">
     <div class="greetings_words">
